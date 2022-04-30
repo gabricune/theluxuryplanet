@@ -47,6 +47,23 @@ body, html
 	list-style-type: none;
 }
 
+body, php
+{
+    font-family: 'Poppins', sans-serif;
+	margin: 0;
+	height: 100%;
+    scroll-behavior: smooth;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	text-decoration: none;
+	list-style-type: none;
+}
+
 
 
 
@@ -814,7 +831,10 @@ hr
   z-index: 5;
 }
 
-form {
+
+.sign-up-form {
+  opacity: 0;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -826,13 +846,17 @@ form {
   grid-row: 1 / 2;
 }
 
-form.sign-up-form {
-  opacity: 0;
-  z-index: 1;
-}
-
-form.sign-in-form {
+.sign-in-form {
   z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0rem 5rem;
+  transition: all 0.2s 0.7s;
+  overflow: hidden;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
 
 .title {
@@ -1542,7 +1566,7 @@ form.sign-in-form {
   width: 50px;
   height: 40px;
   padding-left: 10px;
-  font-size: 20px;
+  font-size: 17px;
   margin-right: 10px;
   border: 1px solid orangered;
 }
@@ -1560,6 +1584,7 @@ form.sign-in-form {
 .btnprod{
   padding: 10px;
   font-size: 14px;
+  width: fit-content !important;
 }
 
 
@@ -1615,7 +1640,7 @@ td{
 }
 
 td input{
-  width: 40px;
+  width: fit-content;
   height: 30px;
   padding: 5px;
 }
@@ -1654,4 +1679,56 @@ th:last-child{
   .cart-info p{
     display: none;
   }
+}
+
+input[type=text]{
+  width: fit-content;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+.rate {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+}
+.rate:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+}
+.rate:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:30px;
+  color:#ccc;
+}
+.rate:not(:checked) > label:before {
+  content: '★ ';
+}
+.rate > input:checked ~ label {
+  color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+.btnrimuovi{
+  color: orangered;
+  background-color: white;
+  width: fit-content;
+  border:0px;
+  padding: 0px;
 }

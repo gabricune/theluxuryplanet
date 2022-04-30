@@ -1,3 +1,11 @@
+<?php
+	session_start();
+
+  require('pagine/data/connessionedb.php');
+  
+  $conn = new mysqli($db_servername,$db_username,$db_password,$db_name);
+ ?>
+
 <!DOCTYPE html>
 <html lang="it">
 
@@ -17,16 +25,16 @@
   <body>
   
   <!-- NAV -->
-    <nav>
+  <nav>
       <div id="topnav" class="navbar">
         <a href="#" class="logo"><span>the</span>LUXURY<span>PLANET</span></a>
           <div class="navbar-right menu">
             <ul>
-              <li><a href="index.html" class="active">Home</a></li>
-              <li><a href="./pagine/shop.html">Shop</a></li>
-              <li><a href="./pagine/contatti.html">Contatti</a></li>
-              <li><a href="./pagine/shopcart.html"><i class="fa fa-shopping-bag"></i></a></li>
-              <li><a href="./pagine/login.html"><i class="fa fa-user" aria-hidden="true" ></i></a></li>
+              <li><a href="index.php" class="active">Home</a></li>
+              <li><a href="./pagine/shop.php">Shop</a></li>
+              <li><a href="./pagine/contatti.php">Contatti</a></li>
+              <li><a href="./pagine/shopcart.php"><i class="fa fa-shopping-bag"></i></a></li>
+              <li><a href="./pagine/dati_personali.php"><i class="fa fa-user" aria-hidden="true" ></i></a></li>
             </ul>
           </div>
           <div class="navbar-right">
@@ -91,7 +99,7 @@
     <!-- GALLERIA 3 -->
     <div class="galleria zoom">
       <h2>Vivi l'eperienza del lusso</h2>
-      <p>Concediti una vacanza esclusiva nelle nostre lussuose strutture</p>
+      <p>Acquista i migliori articoli del mondo dello sport: vela ed equitazione, gli sport selezionati dal team di TheLuxuryPlanet</p>
       
       <div class="galleriabox galleriabox--res zoom">
         <img src="../immagini/img26.jpg" alt="seceda">
@@ -104,7 +112,7 @@
       </div>
       <br>
       <div class="reveal">
-      <p>Concediti una vacanza esclusiva nei nostri lussuosi hotel, rilassati nelle SPA e nelle piscine esterne riscaldate, ammirando il panorama. Prova i migliori ristoranti eleganti e gusta il nostro buon tradizionale vino</p>
+      <p>La nostra piattaforma di design ti permette di navigare con serenità e scoprire prodotti d’alta qualità, selezionati per le migliori prestazioni sportive.</p>
     </div>
     </div>
 
@@ -116,75 +124,24 @@
       <img src="./immagini/img14.jpg" alt="immagine">
     </div>
     <div class="testo4 reveal">
-      <h2>Patrimonio Unesco</h2>
-      <p>Trentino è sinonimo di Patrimonio Unesco: alcune tre le montagne più belle al mondo si trovano qui. Le creste più elevate creano dei profili straordinari e i laghi rispecchiano la bellezza di una natura incontaminata.</p>
+      <h2>Dove i sogni diventano realtà</h2>
+      <p>Hai mai immaginato un luogo dedicato all’esperienza del lusso? Hai appena raggiunto il posto giusto! Su TheLuxuryPlanet troverai ciò che stai cercando!</p>
     </div>
   </div>
-
+  <a name="ancora2"></a>
     <div class="containerdiscover">
       <div class="boxdiscover boxdiscover--news">
         <div class="contenutodiscovertext contenutodiscovertext--news">
           <h1 class="tw">E-Shop</h1>
-          <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+          <p>Acquista i migliori articoli di orologeria e gioielleria, Patek Philippe e Cartier, tra le migliori marche del settore.</p>
         </div>
       </div>
     </div>
     <br>
-    <!--featured products-->
-    <div class="small-container">
-      <h2 class="titleshop">lorem ipsum dolor</h2>
-      <div class="row">
-        <div class="col-4">
-          <img src="../immagini/img26.jpg" alt="seceda">
-          <h4>Lorem ipsum dolor</h4>
-          <div class="rating">
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-          <p>price</p>
-        </div>
-        <div class="col-4">
-          <img src="../immagini/img26.jpg" alt="seceda">
-          <h4>Lorem ipsum dolor</h4>
-          <div class="rating">
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-          <p>price</p>
-        </div>
-        <div class="col-4">
-          <img src="../immagini/img26.jpg" alt="seceda">
-          <h4>Lorem ipsum dolor</h4>
-          <div class="rating">
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-          <p>price</p>
-        </div>
-        <div class="col-4">
-          <img src="../immagini/img26.jpg" alt="seceda">
-          <h4>Lorem ipsum dolor</h4>
-          <div class="rating">
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-          <p>price</p>
-        </div>
-      </div>
-    </div>
-
+  
+  </div>
+  </div>
+  <a name="ancora3"></a>
     <div class="titoloservizi">
       <h1>TheHubs</h1>
     </div>
@@ -220,8 +177,8 @@
     <iframe class="mappaattributes"  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10970.634608145316!2d11.6710039!3d46.5742152!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9ddf09f32568450d!2sCavallino%20Bianco%20Family%20Spa%20Grand%20hotel!5e0!3m2!1sit!2sit!4v1622578166195!5m2!1sit!2sit"></iframe>
   </div>
   <div class="testo4 reveal">
-    <h2>Cavallino Bianco Family Resort</h2>
-    <p>Questo Grand hotel è dedicato alle famiglie e il suo staff saprà come regalarvi una vacanza da sogno. Avrete l'occasione di abbandonare l'ordinario e vivere in un mondo fatato!</p>
+    <h2>TheHub New York</h2>
+    <p>Vieni a trovarci al nostro hub di New York, situato a pochi passi da Times Square, piazza perfetta per chi ama fare shopping.</p>
   </div>
 </div>
 
@@ -230,28 +187,14 @@
     <iframe class="mappaattributes"  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10970.634608145316!2d11.6710039!3d46.5742152!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9ddf09f32568450d!2sCavallino%20Bianco%20Family%20Spa%20Grand%20hotel!5e0!3m2!1sit!2sit!4v1622578166195!5m2!1sit!2sit"></iframe>
   </div>
   <div class="testo4 reveal">
-    <h2>Cavallino Bianco Family Resort</h2>
-    <p>Questo Grand hotel è dedicato alle famiglie e il suo staff saprà come regalarvi una vacanza da sogno. Avrete l'occasione di abbandonare l'ordinario e vivere in un mondo fatato!</p>
+    <h2>TheHub Londra</h2>
+    <p>Vieni a trovarci al nostro hub di Londra, situato accanto al Big Ban: alza la testa e vedrai sempre che ora è.</p>
   </div>
 </div>
 
 
   <!-- FOOTER -->
-  <footer>
-    <div class="footerpagina">
-      <div class="medialinks">
-        <ul>
-          <li><a href="https://it-it.facebook.com/gcaerialphotos/"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="https://www.instagram.com/gcaerialphotos/"><i class="fa fa-instagram"></i></a></li>
-          <li><a href="https://www.youtube.com/channel/UCnqOV7ThDAUVk59U3zi1kmg"><i class="fa fa-youtube"></i></a></li>
-        </ul>
-      </div>
-      <br>
-      <hr>
-      <br>
-      <p>© 2021 Cere&Cune. All rights reserved.</p>
-    </div>
-  </footer>
+  <?php include ('pagine/footer.php') ?>
 
 
 

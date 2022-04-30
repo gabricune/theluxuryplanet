@@ -1,3 +1,16 @@
+<?php
+	session_start();
+	//echo session_id();
+
+	require('data/connessionedb.php');
+
+	if(!isset($_SESSION['login_username'])){
+		header('location: login.php');
+	}
+	$username = $_SESSION["login_username"];
+  $conn = new mysqli($db_servername,$db_username,$db_password,$db_name);
+?>
+
 <!DOCTYPE html>
 <html lang="it">
 
@@ -17,16 +30,17 @@
   <body>
   
   <!-- NAV -->
-    <nav>
+  <nav>
       <div id="topnav" class="navbar">
         <a href="#" class="logo"><span>the</span>LUXURY<span>PLANET</span></a>
           <div class="navbar-right menu">
             <ul>
-              <li><a href="../index.html">Home</a></li>
-                <li><a href="./shop.html">Shop</a></li>
-                <li><a href="./contatti.html">Contatti</a></li>
-                <li><a href="./shopcart.html"><i class="fa fa-shopping-bag"></i></a></li>
-                <li><a href="./login.html"><i class="fa fa-user" aria-hidden="true" ></i></a></li>
+              <li><a href="../index.php" class="active">Home</a></li>
+              <li><a href="./shop.php">Shop</a></li>
+              <li><a href="./contatti.php">Contatti</a></li>
+              <li><a href="./shopcart.php"><i class="fa fa-shopping-bag"></i></a></li>
+              <li><a href="./dati_personali.php"><i class="fa fa-user" aria-hidden="true" ></i></a></li>
+              <li><a href="./logout.php">Logout</a></li>
             </ul>
           </div>
           <div class="navbar-right">
@@ -106,131 +120,73 @@
   
   <!--featured products-->
   <div class="small-container">
-    <h2 class="titleshop">lorem ipsum dolor</h2>
-    <div class="row">
-      <div class="col-4">
-        <img src="./immagini/img26.jpg" alt="seceda">
-        <h4>Lorem ipsum dolor</h4>
-        <div class="rating">
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star-o"></i>
-        </div>
-        <p>price</p>
-      </div>
-      <div class="col-4">
-        <img src="./immagini/img26.jpg" alt="seceda">
-        <h4>Lorem ipsum dolor</h4>
-        <div class="rating">
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star-o"></i>
-        </div>
-        <p>price</p>
-      </div>
-      <div class="col-4">
-        <img src="./immagini/img26.jpg" alt="seceda">
-        <h4>Lorem ipsum dolor</h4>
-        <div class="rating">
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star-o"></i>
-        </div>
-        <p>price</p>
-      </div>
-      <div class="col-4">
-        <img src="./immagini/img26.jpg" alt="seceda">
-        <h4>Lorem ipsum dolor</h4>
-        <div class="rating">
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star-o"></i>
-        </div>
-        <p>price</p>
-      </div>
-    </div>
+    <h2 class="titleshop">Orologi</h2>
+     <div class='row'>
+  <?php
+    $sql = "SELECT *
+          FROM prodotti
+          WHERE nome LIKE 'Philippe Patek%'
+          ORDER BY codprodotto DESC";
+          $ris = $conn->query($sql);
+          $temp=0;
+          while ($row= $ris->fetch_assoc() and $temp!=4) {
+            $codprodotto=$row['codprodotto'];
+            $nome=$row['nome'];
+            $immagine = $row['immagine'];
+            //$rating = $row['rating'];
+            $prezzo = $row['prezzo'];
+            echo "
+
+      <div class='col-4'>
+      <a href='prodotto.php?codprodotto=$codprodotto'>
+        <img src='$immagine' alt='seceda' >
+        </a>
+        <p>$nome</p>
+        <p>$prezzo $</p>
+      </div>";   
+    $temp++;
+  }
+  ?>
+  </div>
   </div>
   
   <!--featured products-->
   <div class="small-container">
-    <h2 class="titleshop">lorem ipsum dolor</h2>
-    <div class="row">
-      <div class="col-4">
-        <img src="./immagini/img26.jpg" alt="seceda">
-        <h4>Lorem ipsum dolor</h4>
-        <div class="rating">
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star-o"></i>
-        </div>
-        <p>price</p>
-      </div>
-      <div class="col-4">
-        <img src="./immagini/img26.jpg" alt="seceda">
-        <h4>Lorem ipsum dolor</h4>
-        <div class="rating">
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star-o"></i>
-        </div>
-        <p>price</p>
-      </div>
-      <div class="col-4">
-        <img src="./immagini/img26.jpg" alt="seceda">
-        <h4>Lorem ipsum dolor</h4>
-        <div class="rating">
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star-o"></i>
-        </div>
-        <p>price</p>
-      </div>
-      <div class="col-4">
-        <img src="./immagini/img26.jpg" alt="seceda">
-        <h4>Lorem ipsum dolor</h4>
-        <div class="rating">
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star" ></i>
-          <i class="fa fa-star-o"></i>
-        </div>
-        <p>price</p>
-      </div>
-    </div>
+    <h2 class="titleshop">Gioielli</h2>
+     <div class='row'>
+  <?php
+    $sql = "SELECT *
+          FROM prodotti
+          WHERE nome LIKE 'Cartier %'
+          ORDER BY codprodotto DESC";
+          $ris = $conn->query($sql);
+          $temp=0;
+          while ($row= $ris->fetch_assoc() and $temp!=4) {
+            $codprodotto=$row['codprodotto'];
+            $nome=$row['nome'];
+            $immagine = $row['immagine'];
+            //$rating = $row['rating'];
+            $prezzo = $row['prezzo'];
+            echo "
+
+      <div class='col-4'>
+      <a href='prodotto.php?codprodotto=$codprodotto'>
+        <img src='$immagine' alt='seceda' >
+        </a>
+        <p>$nome</p>
+        <p>$prezzo $</p>
+      </div>";   
+    $temp++;
+  }
+  ?>
+  </div>
   </div>
 
   
   <!-- FOOTER -->
-  <footer>
-    <div class="footerpagina">
-      <div class="medialinks">
-        <ul>
-          <li><a href="https://it-it.facebook.com/gcaerialphotos/"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="https://www.instagram.com/gcaerialphotos/"><i class="fa fa-instagram"></i></a></li>
-          <li><a href="https://www.youtube.com/channel/UCnqOV7ThDAUVk59U3zi1kmg"><i class="fa fa-youtube"></i></a></li>
-        </ul>
-      </div>
-      <br>
-      <hr>
-      <br>
-      <p>© 2021 Cere&Cune. All rights reserved.</p>
-    </div>
-  </footer>
+  <?php 
+    include ('footer.php');
+  ?>
 
 
 
