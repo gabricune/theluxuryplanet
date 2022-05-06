@@ -34,8 +34,19 @@
     require('nav.php') 
   ?>
 
+
+
+
+
     <!-- Contenuto-->
-    <div class="text">L'ordine è stato ricevuto e sarà spedito in 3-5 giorni lavorativi.</div>
+    <div class="str4">
+    <div class="imagec4 reveal">
+      <img src="../immagini/luxury-lifestyle.jpg" alt="immagine">
+    </div>
+    <div class="testo4 reveal">
+      <h2>L'ordine è stato ricevuto e sarà spedito in 3-5 giorni lavorativi.</h2>
+      <br>
+      <p> 
     <?php
     
     $sql = "SELECT indirizzo
@@ -48,6 +59,12 @@
           }
             
     ?>
+    <br>
+    <br>
+    Grazie per aver scelto TheLuxuryPlanet!
+    </p>
+    </div>
+    </div>
 
     <!-- FOOTER -->
     <?php include ('footer.php') ?>

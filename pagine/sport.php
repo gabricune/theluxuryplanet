@@ -56,32 +56,11 @@
   <!-- SLIDE HERO -->
   <div class="slider slider--shop">
     <div class="slides">
-        <div class="slide">
-            <div class="slide-data slide-data--btn">
-                <h1>Benvenuto nel lusso</h1>
-                <p>TheLuxuryPlanet è il luogo dove i sogni diventano realtà</p>
-                <a href="#ancora1">
-                <button>scopri</button>
-                </a>
-            </div>
+        <div class="slide slide--sport">
         </div>
-        <div class="slide slide--scura">
-            <div class="slide-data">
-                <h1>Un E-Shop unico</h1>
-                <p>Acquista articoli di sport, alta gioielleria e molto altro</p>
-                <a href="#ancora2">
-                  <button>scopri</button>
-                </a>
-            </div>
+        <div class="slide slide--sport">
         </div>
-        <div class="slide">
-            <div class="slide-data">
-                <h1>TheHubs</h1>
-                <p>Scopri le nostre sedi e lasciati guidare dalla magia del lusso</p>
-                <a href="#ancora3">
-                  <button>scopri</button>
-                </a>
-            </div>
+        <div class="slide slide--sport">
         </div>
     </div>
 
@@ -98,29 +77,11 @@
         <span onclick="currentslide(3)"></span>
     </div>
   </div>
-  <a name="ancora1"></a>
-  <hr class="lineanera">
-
-  <!--featured-->
-  <div class="categorie">
-    <div class="small-container">
-      <div class="row">
-        <div class="col-3">
-          <img src="./immagini/img26.jpg" alt="seceda">
-        </div>
-        <div class="col-3">
-          <img src="./immagini/img26.jpg" alt="seceda">
-        </div>
-        <div class="col-3">
-          <img src="./immagini/img26.jpg" alt="seceda">
-        </div>
-      </div>
-    </div>
-  </div>
+  <br>
   
   <!--featured products-->
   <div class="small-container">
-    <h2 class="titleshop">Orologi</h2>
+    <h2 class="titleshop">Le novità</h2>
      <div class='row'>
   <?php
     $sql = "SELECT *
@@ -152,7 +113,7 @@
   
   <!--featured products-->
   <div class="small-container">
-    <h2 class="titleshop">Gioielli</h2>
+    <h2 class="titleshop">Le scelte degli esperti</h2>
      <div class='row'>
   <?php
     $sql = "SELECT *

@@ -55,6 +55,7 @@
 	<?php
 	require ('nav.php');
 	?>
+<section>
 	<div class="containerx">
 		<h1>Dati Personali</h1>
 		<?php
@@ -91,7 +92,9 @@
 				<input class='btn btnprod' type="submit" name="pulsante_modifica" value="<?php if($modifica==false) echo $strmodifica; else echo $strconferma; ?>">
 			</p>
 		</form>	
-	</div>	
+	</div>
+	<br>
+</section>	
 	<?php include ('footer.php') ?>
 </body>
 </html>

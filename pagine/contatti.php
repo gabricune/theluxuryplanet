@@ -52,12 +52,12 @@
 
         <div class="form-group">
           <label for="firstName">Nome</label>
-          <input type="text" id="firstName" name="firstName">
+          <input id="firstName" name="firstName">
         </div>
   
         <div class="form-group">
           <label for="latsName">Cognome</label>
-          <input type="text" id="lastName" name="lastName">
+          <input  id="lastName" name="lastName">
         </div>
   
         <div class="form-group">

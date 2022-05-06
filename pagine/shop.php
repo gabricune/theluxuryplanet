@@ -92,52 +92,49 @@
     </div>
     <br>
 
-      <!-- GALLERIA 3 -->
-  <div class="galleria zoom">
-    <h2>Vivi l'eperienza del lusso</h2>
-    <p>Hai mai immaginato un luogo dedicato all’esperienza del lusso? Hai appena raggiunto il posto giusto! Su TheLuxuryPlanet troverai ciò che stai cercando!</p>
-    
-    <div class="galleriabox galleriabox--res zoom">
-      <img src="../immagini/img26.jpg" alt="seceda">
+  <!--featured-->
+  <div class="categorie">
+    <div class="small-container">
+      <div class="row">
+        <div class="col-3">
+          <img src="../immagini/prada.jpg" alt="prada">
+        </div>
+        <div class="col-3">
+          <img src="../immagini/cartier.jpg" alt="cartier">
+        </div>
+        <div class="col-3">
+          <img src="../immagini/ferrari.jpg" alt="ferrari">
+        </div>
+      </div>
     </div>
-    <div class="galleriabox zoom">
-      <img src="../immagini/img27.jpg" alt="golf">
-    </div>
-    <div class="galleriabox galleriabox--res zoom">
-      <img src="../immagini/img28.jpg" alt="sirmione">
-    </div>
-    <br>
-    <div class="reveal">
-    <p>Acquista i migliori articoli del mondo dello sport: vela ed equitazione, gli sport selezionati dal team di TheLuxuryPlanet</p>
-  </div>
   </div>
 
   <!-- SLIDE HERO -->
   <div class="slider slider--shop">
     <div class="slides">
-        <div class="slide">
+        <div class="slide slide--shop">
             <div class="slide-data slide-data--btn">
-                <h1>Benvenuto nel lusso</h1>
-                <p>TheLuxuryPlanet è il luogo dove i sogni diventano realtà</p>
-                <a href="#ancora1">
+                <h1>Sport</h1>
+                <p>Pratica al meglio il tuo sport preferito con i migliori prodotti del settore</p>
+                <a href="#ancoras">
                 <button>scopri</button>
                 </a>
             </div>
         </div>
-        <div class="slide">
+        <div class="slide slide--shop">
             <div class="slide-data slide-data--btn">
-                <h1>Un E-Shop unico</h1>
-                <p>Acquista articoli di sport, alta gioielleria e molto altro</p>
-                <a href="#ancora2">
+                <h1>Jewelry</h1>
+                <p>Acquista articoli di alta gioielleria e fai avverare i tuoi desideri</p>
+                <a href="#ancoraj">
                   <button>scopri</button>
                 </a>
             </div>
         </div>
-        <div class="slide">
+        <div class="slide slide--shop">
             <div class="slide-data slide-data--btn">
-                <h1>TheHubs</h1>
-                <p>Scopri le nostre sedi e lasciati guidare dalla magia del lusso</p>
-                <a href="#ancora3">
+                <h1>Events</h1>
+                <p>Esperienze indimenticabili, da fare almeno una volta nella vita</p>
+                <a href="#ancora5">
                   <button>scopri</button>
                 </a>
             </div>
@@ -157,27 +154,9 @@
         <span onclick="currentslide(3)"></span>
     </div>
   </div>
-  <a name="ancora1"></a>
   
-  
-
-  <!--featured-->
-  <div class="categorie">
-    <div class="small-container">
-      <div class="row">
-        <div class="col-3">
-          <img src="../immagini/img26.jpg" alt="seceda">
-        </div>
-        <div class="col-3">
-          <img src="../immagini/img26.jpg" alt="seceda">
-        </div>
-        <div class="col-3">
-          <img src="../immagini/img26.jpg" alt="seceda">
-        </div>
-      </div>
-    </div>
-  </div>
-  
+  <br>
+  <a name="ancoras"></a>
   <!--featured products-->
   <div class="small-container">
   <h2 class="titleshop">Sport</h2>
@@ -209,7 +188,7 @@
   ?>
    </div>
   </div>
-  
+  <a name="ancoraj"></a>
    <!--featured products-->
    <div class="small-container">
     <h2 class="titleshop">Jewelry</h2>
@@ -241,10 +220,10 @@
   ?>
   </div>
   </div>
-
+  <a name="ancora5"></a>
    <!--featured products-->
    <div class="small-container">
-    <h2 class="titleshop">Eventi</h2>
+    <h2 class="titleshop">Events</h2>
      <div class='row' >
   <?php
     $sql = "SELECT *

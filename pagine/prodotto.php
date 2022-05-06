@@ -92,6 +92,8 @@
           </div>
           </form>
             <br>
+            <br>
+            <br>
             <h3>Product details <i class='fa fa-indent' ></i></h3>
             <br>
             <p> $descrizione </p>

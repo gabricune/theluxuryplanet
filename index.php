@@ -54,6 +54,7 @@
             <div class="slide-data">
                 <h1>Benvenuto nel lusso</h1>
                 <p>TheLuxuryPlanet è il luogo dove i sogni diventano realtà</p>
+                <br>
                 <a href="#ancora1">
                 <button>scopri</button>
                 </a>
@@ -63,6 +64,7 @@
             <div class="slide-data">
                 <h1>Un E-Shop unico</h1>
                 <p>Acquista articoli di sport, alta gioielleria e molto altro</p>
+                <br>
                 <a href="#ancora2">
                   <button>scopri</button>
                 </a>
@@ -102,13 +104,13 @@
       <p>Acquista i migliori articoli del mondo dello sport: vela ed equitazione, gli sport selezionati dal team di TheLuxuryPlanet</p>
       
       <div class="galleriabox galleriabox--res zoom">
-        <img src="../immagini/img26.jpg" alt="seceda">
+        <img src="./immagini/lux1.jpg" alt="lux1">
       </div>
       <div class="galleriabox zoom">
-        <img src="../immagini/img27.jpg" alt="golf">
+        <img src="./immagini/lux2.jpg" alt="lux2">
       </div>
       <div class="galleriabox galleriabox--res zoom">
-        <img src="../immagini/img28.jpg" alt="sirmione">
+        <img src="./immagini/lux3.jpg" alt="lux3">
       </div>
       <br>
       <div class="reveal">
@@ -121,7 +123,7 @@
   <!-- PANEL 2 -->
   <div class="str4">
     <div class="imagec4 reveal">
-      <img src="./immagini/img14.jpg" alt="immagine">
+      <img src="./immagini/img77.jpg" alt="immagine">
     </div>
     <div class="testo4 reveal">
       <h2>Dove i sogni diventano realtà</h2>
@@ -134,10 +136,13 @@
         <div class="contenutodiscovertext contenutodiscovertext--news">
           <h1 class="tw">E-Shop</h1>
           <p>Acquista i migliori articoli di orologeria e gioielleria, Patek Philippe e Cartier, tra le migliori marche del settore.</p>
+          <br>
+          <a href="./pagine/shop.php">
+                <button>registrati e acquista</button>
+          </a>
         </div>
       </div>
     </div>
-    <br>
   
   </div>
   </div>
@@ -164,17 +169,17 @@
 <!-- PANEL 3 MAPPE -->
 <div class="str4">
   <div class="map reveal">
-    <iframe class="mappaattributes"  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10970.634608145316!2d11.6710039!3d46.5742152!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9ddf09f32568450d!2sCavallino%20Bianco%20Family%20Spa%20Grand%20hotel!5e0!3m2!1sit!2sit!4v1622578166195!5m2!1sit!2sit"></iframe>
+    <iframe class="mappaattributes"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89547.2303835233!2d9.17773225!3d45.46273385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c1493f1275e7%3A0x3cffcd13c6740e8d!2sMilano%20MI!5e0!3m2!1sit!2sit!4v1651779600889!5m2!1sit!2sit"></iframe>
   </div>
   <div class="testo4 reveal">
-    <h2>Cavallino Bianco Family Resort</h2>
-    <p>Questo Grand hotel è dedicato alle famiglie e il suo staff saprà come regalarvi una vacanza da sogno. Avrete l'occasione di abbandonare l'ordinario e vivere in un mondo fatato!</p>
+    <h2>TheHub Milano</h2>
+    <p>Vieni a trovarci al nostro hub di Milano, situato a pochi passi dal Duomo, posizione ideale per fare affari.</p>
   </div>
 </div>
 
 <div class="str4 str4--white">
   <div class="map reveal">
-    <iframe class="mappaattributes"  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10970.634608145316!2d11.6710039!3d46.5742152!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9ddf09f32568450d!2sCavallino%20Bianco%20Family%20Spa%20Grand%20hotel!5e0!3m2!1sit!2sit!4v1622578166195!5m2!1sit!2sit"></iframe>
+    <iframe class="mappaattributes" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.33750346623!2d-73.97968099999999!3d40.6974881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20Stati%20Uniti!5e0!3m2!1sit!2sit!4v1651778392818!5m2!1sit!2sit"></iframe>
   </div>
   <div class="testo4 reveal">
     <h2>TheHub New York</h2>
@@ -184,7 +189,7 @@
 
 <div class="str4">
   <div class="map reveal">
-    <iframe class="mappaattributes"  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10970.634608145316!2d11.6710039!3d46.5742152!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9ddf09f32568450d!2sCavallino%20Bianco%20Family%20Spa%20Grand%20hotel!5e0!3m2!1sit!2sit!4v1622578166195!5m2!1sit!2sit"></iframe>
+    <iframe class="mappaattributes" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.182370726!2d-0.10159865000000001!3d51.52864165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondra%2C%20Regno%20Unito!5e0!3m2!1sit!2sit!4v1651778911833!5m2!1sit!2sit"></iframe>
   </div>
   <div class="testo4 reveal">
     <h2>TheHub Londra</h2>

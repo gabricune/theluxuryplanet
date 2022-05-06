@@ -266,21 +266,29 @@ nav.sopra .logo
     margin-bottom: 10px;
 }
 
-.slide-data button 
+
+ .slide-data button 
 {
     background: none;
     outline: none;
-    border: 1px solid #fff;
+    border-bottom: 2px solid white;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
     color: #fff;
     font-weight: bolder;
-    padding: 10px 10px;
-    font-size: 20px;
+    padding: 10px 3px 2px;
+    font-size: 15px;
     text-transform: uppercase;
     transition: 0.4s linear;
-	border-radius: 5px;
-	margin-top: 5px;
-}
+} 
 
+.slide-data button:hover{
+    color: #000;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 10px 10px;
+}
 
 
 .slide-data--btn button{
@@ -315,6 +323,66 @@ nav.sopra .logo
     background-color: #fff;
 }
 
+.slide--jw::before
+{
+  background-color: transparent;
+}
+
+.slide--jw:nth-child(1)
+{
+    background-image: url(./immagini/rsx.jpg);
+}
+
+.slide--jw:nth-child(2)
+{
+    background-image: url(./immagini/rdx.jpg);
+}
+
+.slide--jw:nth-child(3)
+{
+    background-image: url(./immagini/hublot.jpg);
+}
+
+.slide--jw::before
+{
+  background-color: transparent;
+}
+
+.slide--shop:nth-child(1)
+{
+    background-image: url(./immagini/horser.jpg);
+}
+
+.slide--shop:nth-child(2)
+{
+    background-image: url(./immagini/rdx.jpg);
+}
+
+.slide--shop:nth-child(3)
+{
+    background-image: url(./immagini/tlux.png);
+}
+
+
+.slide--sport:nth-child(1)
+{
+    background-image: url(./immagini/sailing.jpg);
+}
+
+.slide--sport:nth-child(2)
+{
+    background-image: url(./immagini/horser.jpg);
+}
+
+.slide--sport:nth-child(3)
+{
+    background-image: url(./immagini/img5.jpg);
+}
+
+.slide--sport::before
+{
+  background-color: rgba(0,0,0,0.2);
+}
 
 .slider .arrows 
 {
@@ -1224,17 +1292,17 @@ hr
 .servizibox:nth-child(1)
 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), 
-        url(./immagini/img29.jpg);
+        url(./immagini/milano.jpg);
 }
 .servizibox:nth-child(2)
 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), 
-        url(./immagini/img30.jpg);
+        url(./immagini/londra.jpg);
 }
 .servizibox:nth-child(3)
 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), 
-        url(./immagini/img31.jpg);
+        url(./immagini/newyork.jpg);
 }
 
 .numero
@@ -1732,3 +1800,4 @@ input[type=text]{
   border:0px;
   padding: 0px;
 }
+
